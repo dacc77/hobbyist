@@ -1,12 +1,16 @@
-html,
-head{
-
-}
-
-
+.navbar-list {
+    list-style-type: none; /* This removes the default bullet points */
+    padding: 0; /* Optional: Remove any default padding */
+    margin: 0; /* Optional: Remove any default margin */
+  }
+  
+  .navbar-list li {
+    /* Optional styling for list items, like spacing, fonts, etc. */
+  }
+  
 body {
-    margin: 40;
-    padding: 5;
+    margin: 40px;
+    padding: 5px;
     border: 5px solid rgb(120, 122, 230);
     color: rgb(255, 252, 253);
     font-size: 1em;
@@ -19,3 +23,6 @@ h1 {
     color: rgb(50, 70, 182);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+  

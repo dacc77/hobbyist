@@ -21,3 +21,13 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.navbar-list {
+    list-style-type: none; /* This removes the default bullet points */
+    padding: 0; /* Optional: Remove any default padding */
+    margin: 0; /* Optional: Remove any default margin */
+  }
+  
+  .navbar-list li {
+    /* Optional styling for list items, like spacing, fonts, etc. */
+  }
+  
