@@ -7,6 +7,7 @@
 //question 3. would you rather activities where you can bring your dogs?
 // question 4. are you more into group or solo activities?
 // Define your quiz questions and options
+
 const quizData = [
     {
         question: "What is the scientific name for coast redwoods?",
@@ -45,6 +46,7 @@ const quizContainer = document.getElementById('quiz-container');
 const questionElement = document.getElementById('question');
 const optionsContainer = document.getElementById('options');
 const submitButton = document.getElementById('submit-btn');
+const resultMessageElement = document.getElementById('result-message');
 
 let currentQuestion = 0;
 let score = 0;
@@ -59,16 +61,24 @@ function displayQuestion() {
         const optionElement = document.createElement('div');
         optionElement.classList.add('option');
         optionElement.textContent = option;
-        optionElement.addEventListener('click', checkAnswer);
+
+        optionElement.addEventListener('click', () => {
+            const selectedOption = document.querySelector('.option.selected');
+            if (selectedOption) {
+                selectedOption.classList.remove('selected');
+            }
+            optionElement.classList.add('selected');
+        });
+
         optionsContainer.appendChild(optionElement);
     });
 }
 
-function checkAnswer(event) {
-    const selectedOption = event.target.textContent;
+function checkAnswer() {
+    const selectedOption = document.querySelector('.option.selected');
     const correctAnswer = quizData[currentQuestion].answer;
 
-    if (selectedOption === correctAnswer) {
+    if (selectedOption && selectedOption.textContent === correctAnswer) {
         score++;
     }
 
@@ -76,6 +86,7 @@ function checkAnswer(event) {
 
     if (currentQuestion < quizData.length) {
         displayQuestion();
+        resultMessageElement.textContent = '';
     } else {
         showResults();
     }
@@ -84,6 +95,8 @@ function checkAnswer(event) {
 function showResults() {
     quizContainer.innerHTML = `<h2>You scored ${score} out of ${quizData.length}!</h2>`;
 }
+
+submitButton.addEventListener('click', checkAnswer);
 
 // Start the quiz when the page loads
 displayQuestion();

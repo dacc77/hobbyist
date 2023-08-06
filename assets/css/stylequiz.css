@@ -1,0 +1,50 @@
+.navbar-list {
+    list-style-type: none; /* This removes the default bullet points */
+    padding: 2; /* Optional: Remove any default padding */
+    margin: 2; /* Optional: Remove any default margin */
+    display:flex;
+    background-color:  rgb(117, 80, 80);
+  }
+  
+  .navbar-list li {
+   margin: 0;
+   padding: 0; /* Optional styling for list items, like spacing, fonts, etc. */
+  }
+
+  .navbar-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+  }
+
+  .navbar-list li a:hover {
+    color: #ff9900; /* Change this color to your desired hover color */
+  }
+ 
+body {
+    margin: 40;
+    padding: 5;
+    border: 5px solid rgb(120, 122, 230);
+    border-radius: 5px;
+    color: rgb(255, 252, 253);
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(139, 101, 101);
+    text-align:center;
+
+}
+h1 {
+    color: rgb(50, 70, 182);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.option {
+
+    transition: background-color 0.2s ease; 
+}
+
+.option:hover {
+    background-color:  #ff9900; /* Change background color on hover */
+    border: 1px solid #ffffff; /* Add a border to the hovered option */
+}
